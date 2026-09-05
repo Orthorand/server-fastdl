@@ -1,0 +1,141 @@
+HUONG DAN SU DUNG LENH TRONG GAME
+==================================
+Server: Zombie Plague 4.3 (CS 1.6) - AmxModX 1.10
+Cac cau lenh duoc go trong chat (phim Y) hoac console (~)
+
+----------------------------------------------------------
+1. LENH CHO MOI NGUOI (Member)
+----------------------------------------------------------
+- /zpmenu        : Mo menu chinh cua Zombie Plague (mua bom/luat choi/do etc)
+- /buy           : Mo menu mua vu khi / vat pham cua ZP (neu bat)
+- /knife         : Mo menu chon dao (cac dao SKIN: cua beo, bua, kiem...)
+- /lm            : Mo menu laser mine (cai/cau hinh mien min)
+- /unstuck       : Tu dong go cap khi bi ket o bo map
+- currentmap     : Xem ten map dang choi (khong can dau "/")
+- nextmap        : Xem map tiep theo
+- timeleft       : Xem thoi gian con lai cua luot choi
+- thetime        : Xem gio hien tai cua server
+- ff             : Xem trang thai giet dong doi (friendly fire)
+
+  Thong ke/skin (statsx):
+- /rank          : Xem hang cua ban
+- /rankstats     : Xem thong tin rank (MOTD)
+- /stats         : Xem thong ke nguoi choi (menu/MOTD)
+- /statsme       : Xem thong ke cua ban (MOTD)
+- /top15         : Xem 15 nguoi choi gioi nhat (MOTD)
+- /me            : Xem thong ke vong choi hien tai
+- /hp            : Xem nguoi da giet ban
+- /score         : Xem diem gan nhat
+- /report        : Xem trang thai vu khi ban dang dung
+- /switch        : Bat/tat hien thi thong ke
+
+  Tai khoan/Register (ding ki de luu diem):
+- /register <mat khau>   : Dang ki tai khoan lan dau
+- /login <mat khau>      : Dang nhap tai khoan
+- /changepw              : Doi mat khau
+
+----------------------------------------------------------
+2. LENH CHO VIP (flag: t)
+----------------------------------------------------------
+(Ban phai duoc cap flag "t" trong users.ini moi dung duoc)
+- Tu dong dung model VIP khi sinh ra:
+    • human: models/player/vip_human/vip_human.mdl
+    • zombie: models/player/vip_zombie/vip_zombie.mdl
+- /vip           : Mo menu VIP (cau hinh vi tri/mo hinh...)
+  (Admin ban dau dung flag "l" - ADMIN_RCON; neu chua co nen
+   do dong nhat voi flag "t" truoc khi cap quyen cho VIP)
+
+----------------------------------------------------------
+3. LENH CHO ADMIN (flag z la mac dinh, neu cap them
+   abcdefghijklmnopqrstuv thi la full admin/root)
+----------------------------------------------------------
+Quan ly nguoi choi:
+- amx_kick <ten|#uid> [ly do]          : Da nguoi ra khoi server
+- amx_ban <ten|#uid> <phut> [ly do]    : Cam nguoi choi
+- amx_banip <ten|#uid> <phut> [ly do]  : Cam theo IP
+- amx_unban <steamid|ip>               : Go cam
+- amx_slay <ten>                       : Giet nguoi choi
+- amx_slap <ten> [sat thuong]          : Dat (nem) nguoi choi
+- amx_nick <ten> <nick moi>            : Doi ten nguoi choi
+- amx_votekick <ten>                   : De nghi kick (vote)
+- amx_voteban <ten>                    : De nghi ban (vote)
+- amx_who                              : Xem ai dang o tren server
+
+Quan ly map:
+- amx_map <map>                        : Doi map ngay lap tuc
+- amx_votemap <map1 map2 ...>          : De nghi vote doi map
+- amx_extendmap <so phut>              : Keo dai map hien tai
+- amx_vote <cau hoi> <dap an1> <dap an2>: Tao cuoc vote
+
+Cau hinh / he thong:
+- amx_cvar <cvar> [gia tri]            : Sua bien cau hinh
+- amx_rcon <lenh>                      : Chay lenh server console
+- amx_plugins                          : Xem danh sach plugin
+- amx_modules                          : Xem danh sach module
+- amx_reloadadmins                     : Nap lai users.ini
+- amx_pause / amx_off / amx_on         : Tam dung / bat plugin
+- amx_playerinfo <ten>                 : Xem thong tin nguoi choi
+- amx_last                             : Xem lich su nguoi vua roi
+
+Chat / tin nhan:
+- amx_say <noi dung>      : Gui tin cho tat ca (do)
+- amx_tsay <noi dung>     : Gui tin o goc tren
+- amx_csay <noi dung>     : Gui tin o giua man hinh
+- amx_psay <ten> <noi dung> : Gui tin rieng mot nguoi
+
+Menu quan ly:
+- amxmodmenu            : Mo menu quan ly admin day du
+- amx_menu              : Mo menu client
+- amx_votemapmenu       : Menu vote map
+- amx_kickmenu / amx_banmenu / amx_slaymenu: menu kick/ban
+- amx_pausecfgmenu      : Quan ly plugin pause/unpause
+- amx_restmenu          : Cam/cho phep vu khi
+
+----------------------------------------------------------
+4. LENH DIEU KHIEN ZP (Admin, console)
+----------------------------------------------------------
+Cac lenh nay can flag trong [Access Flags] cua zombieplague.ini
+(mac dinh la flag "d" / q - tuy cau hinh):
+- zp_swarm    : Bat che do HIVE SWARM (dan zombie than)
+- zp_multi    : Bat che do MULTIPLE (nhieu zombie dau tien)
+- zp_plague   : Bat che do PLAGUE (50% zombie)
+- zp_lnj      : Bat che do APOCALYPSE (100% zombie)
+- zp_nemesis <ten>  : Biet thanh NEMESIS
+- zp_survivor <ten> : Biet thanh SURVIVOR
+- zp_assassin <ten> : Biet thanh ASSASSIN
+- zp_sniper <ten>   : Biet thanh SNIPER
+- zp_predator <ten> : Biet thanh PREDATOR
+- zp_spy <ten>      : Biet thanh SPY
+- zp_wesker <ten>   : Biet thanh WESKER
+- zp_berserker <ten>: Biet thanh BERSERKER
+- zp_bombardier <ten> : Biet thanh BOMBARDIER
+- zp_dragon <ten>   : Biet thanh DRAGON
+- zp_zombie <ten>   : Biet thanh ZOMBIE
+- zp_human <ten>    : Tra ve NGUOI
+- zp_respawn <ten>  : Hoi sinh nguoi choi
+- zp_toggle <1|0>   : Tat/mo Zombie Plague (se load lai map)
+
+----------------------------------------------------------
+5. BOT & EXTRA ITEMS
+----------------------------------------------------------
+- Bot (YaPB) tu dong mua extra items nho plugin
+  zp_bot_buy_extra_items.amxx.
+- Xem danh sach item bot co the mua (console):
+  zp_bot_buy_extra_item_list
+
+- Extra items hien co trong shop (mua bang ammopack):
+    AK47 LONG (0), AKM (0), Colt King Cobra (1), MG3 USA (80),
+    Thanatosgatling (27), Turbulent-7 (90), Janus-7 (15),
+    Janus13 (44), Stun Rifle (300), Turbulent-5 (0), No Recoil (30),
+    Armura (100ap) (5), Armura (200ap) (10)
+
+----------------------------------------------------------
+GHI CHU
+----------------------------------------------------------
+- "/rtv" va "/info": Hien tai KHONG duoc cai tren server.
+  (Neu muon them Rock The Vote hoac lenh mo ta /info, can
+   cai plugin rieng - vi du simple_rtv hay cs16_account_system)
+- Flag VIP hien tai dung "t" (model VIP). Xin nho cap dung
+  flag "t" + "r" (reservation/slot VIP) neu muon.
+- Full admin root dung "abcdefghijklmnopqrstuv".
+- Sau khi sua users.ini, go lenh console: amx_reloadadmins
